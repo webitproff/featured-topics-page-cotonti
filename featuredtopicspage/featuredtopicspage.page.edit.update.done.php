@@ -18,6 +18,10 @@
  * @license BSD
  */
 defined('COT_CODE') or die('Wrong URL');
+
+// подключаем функции плагина, и в нем уже должен быть cot_langfile
+require_once cot_incfile('featuredtopicspage', 'plug'); 
+
 global $db, $db_forum_topics, $db_x, $cfg, $id;
 $article_id = (int)$id;
 if ($article_id <= 0) {
