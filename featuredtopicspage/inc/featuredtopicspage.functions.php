@@ -15,7 +15,16 @@
 defined('COT_CODE') or die('Wrong URL');
 
 require_once cot_langfile('featuredtopicspage', 'plug');
+// нужно было всего-то прописать строку 
+require_once cot_incfile('forums', 'module'); 
 
+//обратить внимание, что бы по другим файлам, где это нужно было прописана строка
+// require_once cot_incfile('featuredtopicspage', 'plug'); 
+
+// Определяем таблицу форумных тем (если ещё не определена - это на всякий то ругается то нет)
+if (!isset($db_forum_topics)) {
+    $db_forum_topics = Cot::$db->forum_topics;
+}
 /**
  * cleaning text .
  * @param string $text Input text
