@@ -17,7 +17,7 @@ defined('COT_CODE') or die('Wrong URL');
 require_once cot_langfile('featuredtopicspage', 'plug');
 // нужно было всего-то прописать строку 
 require_once cot_incfile('forums', 'module'); 
-
+Cot::$db->registerTable('featured_topics_page');
 //обратить внимание, что бы по другим файлам, где это нужно было прописана строка
 // require_once cot_incfile('featuredtopicspage', 'plug'); 
 
